@@ -24,9 +24,6 @@ Example
   <img src = "https://user-images.githubusercontent.com/70493869/104120066-552a9600-5377-11eb-8239-440cd642df0d.png"></img>
 </div>
 
-# Installation
-All the codes are based on Colab Notebooks, using GPU on the notebook settings. Also, `requirements.txt` file is attached. 
-
 
 # Result
 
@@ -61,3 +58,5 @@ weighted avg       0.55      0.54      0.54      9122
 
 
 
+# Installation
+All the codes are based on Colab Notebooks, using GPU on the notebook settings. Also, `requirements.txt` file is attached. 
