@@ -59,4 +59,5 @@ weighted avg       0.55      0.54      0.54      9122
 
 
 # Installation
-All the codes are based on Colab Notebooks, using GPU on the notebook settings. Also, `requirements.txt` file is attached. 
+All the results are based on Colab Notebooks, using GPU on the notebook settings. Also, `requirements.txt` file is attached. 
+
