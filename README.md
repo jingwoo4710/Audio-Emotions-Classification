@@ -27,31 +27,23 @@ Example
 
 # Result
 
+|Model|Accuracy|Precision|Recall|F1|
+|------|---|---|---|---|
+|CNN|0.42|0.45|0.41|0.42|
+|INCEPTION|0.47|0.49|0.45|0.43|
+
+
 ## 1. CNN Model
-
-```
-              precision    recall  f1-score   support
-
-       angry       0.55      0.67      0.60      1465
-     disgust       0.57      0.44      0.50      1413
-        fear       0.46      0.48      0.47      1393
-       happy       0.43      0.57      0.49      1467
-     neutral       0.59      0.52      0.55      1429
-         sad       0.58      0.48      0.53      1473
-    surprise       0.83      0.69      0.75       482
-
-    accuracy                           0.54      9122
-   macro avg       0.57      0.55      0.56      9122
-weighted avg       0.55      0.54      0.54      9122
-```
 <div>
-  <img src = "https://user-images.githubusercontent.com/70493869/104126335-448e1600-539f-11eb-9132-038b57894018.png"></img>
+  <img src = "https://user-images.githubusercontent.com/70493869/104155161-e6f2db80-5429-11eb-94a0-39fc2db93afa.png"></img>
 </div>
 
 
 
 ## 2. InceptionResNetV2
-
+<div>
+  <img src = "https://user-images.githubusercontent.com/70493869/104155048-af842f00-5429-11eb-9e8e-1c304958e59c.png"></img>
+</div>
 
 
 
