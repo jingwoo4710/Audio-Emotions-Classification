@@ -1,14 +1,20 @@
 ![Generic badge](https://img.shields.io/badge/version-1.1.1-green.svg)
 # Performances of CNN with that of Transfer learning on Audio Emotions Classification
-There are tons of examples using CNN model to classify emotions from the audio. However, very limited examples can be found using transfer learning. This causes a question  "why people are more likely to use CNN models than other models?". From the generalization point of view, the well-knonw pre-trained models are more applicable for emotion detections such as [Wavenet](https://deepmind.com/blog/article/wavenet-generative-model-raw-audio), and [InceptionResNetV2](https://arxiv.org/abs/1602.07261). In this project, the comparison of performances of CNN model and pre-trained InceptionResNetV2 is made. 
+There are tons of examples using the CNN model to classify emotions from the audio. However,  there are a few examples of using transfer learning. This causes the question of why people are more likely to use CNN models than other models? From the generalization point of view, the well-known pre-trained models are more applicable for emotion detections such as [Wavenet](https://deepmind.com/blog/article/wavenet-generative-model-raw-audio), and [InceptionResNetV2](https://arxiv.org/abs/1602.07261). In this project, the comparison of performances of the CNN model and pre-trained InceptionResNetV2 is made.
+
+
+# Installation
+All the results are based on Colab Notebooks, using GPU on the notebook settings. Also, the `requirements.txt` file is attached. 
+
+
 # Models
 ## 1. CNN 
-In the Kaggle, there are many examples of CNN model to classify emotions from the sound. [The best CNN model](https://www.kaggle.com/ejlok1/audio-emotion-part-3-baseline-model) is adopted for a base-line model. Therefore, this model is heavily borrowed from the Kaggle notebook. 
+In the Kaggle, there are many examples of CNN model to classify emotions from the sound. [The best CNN model](https://www.kaggle.com/ejlok1/audio-emotion-part-3-baseline-model) behaves as a base-line model. Therefore, this base-line model is heavily borrowed from the Kaggle notebook.
 ## 2. InceptionResNetV2
-With the method of transfer leanring, InceptionResNetV2 model is used as a feature extractor. In order to use InceptionResNetV2, the default data size is (299, 299, 3). Therefore, the sound file is converted to RGB picture, red being spectrogram, green being scalogram and blue MFCC(Mel-Frequency Cepstral Frequencys). 
+With the method of transfer learning, the InceptionResNetV2 model acts as a feature extractor. In order to use InceptionResNetV2, the default data size is (299, 299, 3). Therefore, the sound file is converted to an RGB picture, red being spectrogram, green being scalogram, and blue MFCC(Mel-frequency Cepstral Frequency). 
 
 # Dataset
-Dataset is obatained from the [Kaggle](https://www.kaggle.com/uwrfkaggler/ravdess-emotional-speech-audio). RAVDESS dataset is speech audio-only files. The RAVDESS contains 24 professional actors(12 female, 12 male), vocalizing two lexically-matched statements in a neutral North American accent. Speech emotions includes calm, happy, sad, angry, fearful, surprise, and disgust expressions. Each expression is produced at two levels of emotional intensity (normal, strong), with an additional neutral expression.
+Dataset is obatained from the [Kaggle](https://www.kaggle.com/uwrfkaggler/ravdess-emotional-speech-audio). RAVDESS dataset is speech audio-only files. The RAVDESS contains 24 professional actors(12 female, 12 male), vocalizing emotions including calm, happy, sad, angry, fearful, surprise, and disgust expressions. Each expression is produced at two levels of emotional intensity (normal, strong), with an additional neutral expression.
 
 Example
 ------------------------------------
@@ -33,6 +39,7 @@ Example
 |INCEPTION|0.47|0.49|0.45|0.43|
 
 
+
 ## 1. CNN Model
 <div>
   <img src = "https://user-images.githubusercontent.com/70493869/104155161-e6f2db80-5429-11eb-94a0-39fc2db93afa.png"></img>
@@ -47,9 +54,15 @@ Example
 
 
 
+# Conclusion
+Since there is a RAM limit in Colab notebooks. Though Limited Dataset is used to train InceptionResNetV2, the performance is slightly higher than that of the CNN model. To be a fair comparison, every other control variables should be controlled. In this case, a direct comparison of performances is not valid. Therefore, a new CNN model designed to be trained by the RGB Sound dataset is introduced. This model is simple to help see the differences between the two models. 
+
+|Model|Accuracy|Precision|Recall|F1|
+|CNN(RGB Audio)|0.06|0.004|0.07|0.09|
+
+The table above tells the performance is far less than expected. Since the dataset has a good quality audio file, it's straightforward to tell the differences between emotions. However, the RGB version of the Audio file needs more steps to differentiate emotions. In other words, InceptionResNetV2 as a feature extractor is better than just the CNN model. Because the performances of InceptionResNetV2 is already proved, this could be taken for granted.
+
+To summarize, the transfer learning method indeed shows a better performance than the CNN model. This might be because InceptionResNetV2 has a better feature extractor. But, InceptionResNetV2 consume a lot of RAM in the colab notebook. Hence, for the people aiming for better performances, transfer learing method is recomended. In contrast, a simple CNN model could work perfectly with very limited use of RAM. Therefore, for the people aiming for time, and efficiency, the CNN model is recommended. 
 
 
-
-# Installation
-All the results are based on Colab Notebooks, using GPU on the notebook settings. Also, `requirements.txt` file is attached. 
 
