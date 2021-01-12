@@ -58,6 +58,7 @@ Example
 Since there is a RAM limit in Colab notebooks. Though Limited Dataset is used to train InceptionResNetV2, the performance is slightly higher than that of the CNN model. To be a fair comparison, every other control variables should be controlled. In this case, a direct comparison of performances is not valid. Therefore, a new CNN model designed to be trained by the RGB Sound dataset is introduced. This model is simple to help see the differences between the two models. 
 
 |Model|Accuracy|Precision|Recall|F1|
+|------|---|---|---|---|
 |CNN(RGB Audio)|0.06|0.004|0.07|0.09|
 
 The table above tells the performance is far less than expected. Since the dataset has a good quality audio file, it's straightforward to tell the differences between emotions. However, the RGB version of the Audio file needs more steps to differentiate emotions. In other words, InceptionResNetV2 as a feature extractor is better than just the CNN model. Because the performances of InceptionResNetV2 is already proved, this could be taken for granted.
