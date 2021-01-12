@@ -1,4 +1,3 @@
-![Generic badge](https://img.shields.io/badge/version-1.1.1-green.svg)
 # Performances of CNN with that of Transfer learning on Audio Emotions Classification
 There are tons of examples using the CNN model to classify emotions from the audio. However,  there are a few examples of using transfer learning. This causes the question of why people are more likely to use CNN models than other models? From the generalization point of view, the well-known pre-trained models are more applicable for emotion detections such as [Wavenet](https://deepmind.com/blog/article/wavenet-generative-model-raw-audio), and [InceptionResNetV2](https://arxiv.org/abs/1602.07261). In this project, the comparison of performances of the CNN model and pre-trained InceptionResNetV2 is made.
 
@@ -9,12 +8,12 @@ All the results are based on Colab Notebooks, using GPU on the notebook settings
 
 # Models
 ## 1. CNN 
-In the Kaggle, there are many examples of CNN model to classify emotions from the sound. [The best CNN model](https://www.kaggle.com/ejlok1/audio-emotion-part-3-baseline-model) behaves as a base-line model. Therefore, this base-line model is heavily borrowed from the Kaggle notebook.
+In the Kaggle, there are many examples of the CNN model to classify emotions from the sound. [The best CNN model](https://www.kaggle.com/ejlok1/audio-emotion-part-3-baseline-model) behaves as a base-line model. Therefore, this base-line model is heavily borrowed from the Kaggle notebook.
 ## 2. InceptionResNetV2
 With the method of transfer learning, the InceptionResNetV2 model acts as a feature extractor. In order to use InceptionResNetV2, the default data size is (299, 299, 3). Therefore, the sound file is converted to an RGB picture, red being spectrogram, green being scalogram, and blue MFCC(Mel-frequency Cepstral Frequency). 
 
 # Dataset
-Dataset is obatained from the [Kaggle](https://www.kaggle.com/uwrfkaggler/ravdess-emotional-speech-audio). RAVDESS dataset is speech audio-only files. The RAVDESS contains 24 professional actors(12 female, 12 male), vocalizing emotions including calm, happy, sad, angry, fearful, surprise, and disgust expressions. Each expression is produced at two levels of emotional intensity (normal, strong), with an additional neutral expression.
+Dataset is obtained from the [Kaggle](https://www.kaggle.com/uwrfkaggler/ravdess-emotional-speech-audio). RAVDESS dataset is speech audio-only files. The RAVDESS contains 24 professional actors(12 female, 12 male), vocalizing emotions including calm, happy, sad, angry, fearful, surprise, and disgust expressions. Each expression is produced at two levels of emotional intensity (normal, strong), with an additional neutral expression.
 
 Example
 ------------------------------------
@@ -63,7 +62,7 @@ Since there is a RAM limit in Colab notebooks. Though Limited Dataset is used to
 
 The table above tells the performance is far less than expected. Since the dataset has a good quality audio file, it's straightforward to tell the differences between emotions. However, the RGB version of the Audio file needs more steps to differentiate emotions. In other words, InceptionResNetV2 as a feature extractor is better than just the CNN model. Because the performances of InceptionResNetV2 is already proved, this could be taken for granted.
 
-To summarize, the transfer learning method indeed shows a better performance than the CNN model. This might be because InceptionResNetV2 has a better feature extractor. But, InceptionResNetV2 consume a lot of RAM in the colab notebook. Hence, for the people aiming for better performances, transfer learing method is recomended. In contrast, a simple CNN model could work perfectly with very limited use of RAM. Therefore, for the people aiming for time, and efficiency, the CNN model is recommended. 
+To summarize, the transfer learning method indeed shows a better performance than the CNN model. This might be because InceptionResNetV2 has a better feature extractor. But, InceptionResNetV2 consumes a lot of RAM in the Colab notebook. Hence, for the people aiming for better performances, the transfer learning method is recommended. In contrast, a simple CNN model could work perfectly with very limited use of RAM. Therefore, for the people aiming for a time, and efficiency, the CNN model is recommended. 
 
 
 
