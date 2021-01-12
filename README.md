@@ -55,7 +55,8 @@ Example
 
 
 # Conclusion
-Since there is a RAM limit in Colab notebooks. Though Limited Dataset is used to train InceptionResNetV2, the performance is slightly higher than that of the CNN model. To be a fair comparison, every other control variables should be controlled. In this case, a direct comparison of performances is not valid. Therefore, a new CNN model designed to be trained by the RGB Sound dataset is introduced. This model is simple to help see the differences between the two models. 
+Since there is a RAM limit in Colab notebooks, a limited Dataset is used to train InceptionResNetV2. Even though this problem, the performance is slightly higher than that of the CNN model. To be a fair comparison, every other control variables should be controlled. In this case, a direct comparison of performances is not valid. Therefore, a new CNN model designed to be trained by the RGB Sound dataset is introduced. This model is simple to help see the differences between the two models. 
+
 
 |Model|Accuracy|Precision|Recall|F1|
 |------|---|---|---|---|
