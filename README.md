@@ -9,7 +9,7 @@ All the results are based on Colab Notebooks, using GPU on the notebook settings
 
 # Models
 ## 1. CNN 
-In the Kaggle, there are many examples of the CNN model to classify emotions from the sound. [The best CNN model](https://www.kaggle.com/ejlok1/audio-emotion-part-3-baseline-model) behaves as a base-line model. Therefore, this base-line model is heavily borrowed from the Kaggle notebook.
+In the Kaggle, there are reference examples of the CNN model to classify emotions from the sound. [The best CNN model](https://www.kaggle.com/ejlok1/audio-emotion-part-3-baseline-model) behaves as a base-line model. Therefore, this base-line model is heavily borrowed from the Kaggle notebook.
 ## 2. InceptionResNetV2
 With the method of transfer learning, the InceptionResNetV2 model acts as a feature extractor. In order to use InceptionResNetV2, the default data size is (299, 299, 3). Therefore, the sound file is converted to an RGB picture, red being spectrogram, green being scalogram, and blue MFCC(Mel-frequency Cepstral Frequency). 
 
