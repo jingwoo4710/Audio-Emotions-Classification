@@ -1,6 +1,6 @@
 ![Generic badge](https://img.shields.io/badge/version-1.1.1-green.svg)
 # Performances of CNN with that of Transfer learning on Audio Emotions Classification
-There are tons of examples using the CNN model to classify emotions from the audio. However,  there are a few examples of using transfer learning. This causes the question of why people are more likely to use CNN models than other models? From the generalization point of view, the well-known pre-trained models are more applicable for emotion detections such as [Wavenet](https://deepmind.com/blog/article/wavenet-generative-model-raw-audio), and [InceptionResNetV2](https://arxiv.org/abs/1602.07261). In this project, the comparison of performances of the CNN model and pre-trained InceptionResNetV2 is made.
+There are tons of examples using the CNN model to classify emotions from the audio. However,  there are a few examples of using transfer learning. This causes the question of why people are more likely to use CNN models than other models. From the generalization point of view, the well-known pre-trained models are more applicable for emotion detections such as [Wavenet](https://deepmind.com/blog/article/wavenet-generative-model-raw-audio), and [InceptionResNetV2](https://arxiv.org/abs/1602.07261). In this project, the comparison of performances of the CNN model and pre-trained InceptionResNetV2 is made.
 
 
 # Installation
